@@ -15,6 +15,13 @@ namespace CandidateApi.Controllers
             _service = service;
         }
 
+        // Default GET action to indicate API readiness
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(new { message = "Welcome! The Candidate API is ready to be tested." });
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddOrUpdateCandidate([FromBody] Candidate candidate)
         {
