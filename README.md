@@ -6,6 +6,7 @@
 5. Documentation: Use Swagger for API documentation.
 
 **Assumptions**
+- Using .NET 8
 - Nothing at all, just replaced SqlServer with Sqlite in the middle of development so that connections strings are not required to be modified for the targeting machine.
 
 **Time Spent**
