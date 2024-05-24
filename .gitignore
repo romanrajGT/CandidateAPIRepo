@@ -5,3 +5,6 @@
 /CandidateApi/.vs
 /CandidateApi/CandidateApi/obj
 /CandidateApi/CandidateApi/bin/Debug/net8.0
+/CandidateApi/CandidateApi/candidates.db
+/CandidateApi/CandidateApi/candidates.db-shm
+/CandidateApi/CandidateApi/candidates.db-wal
