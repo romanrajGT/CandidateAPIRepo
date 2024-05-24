@@ -25,6 +25,26 @@ namespace CandidateApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddOrUpdateCandidate([FromBody] Candidate candidate)
         {
+            if (string.IsNullOrWhiteSpace(candidate.FirstName))
+            {
+                ModelState.AddModelError("FirstName", "First name is required.");
+            }
+
+            if (string.IsNullOrWhiteSpace(candidate.LastName))
+            {
+                ModelState.AddModelError("LastName", "Last name is required.");
+            }
+
+            if (string.IsNullOrWhiteSpace(candidate.Email))
+            {
+                ModelState.AddModelError("Email", "Email is required.");
+            }
+
+            if (string.IsNullOrWhiteSpace(candidate.Comment))
+            {
+                ModelState.AddModelError("Comment", "Comment is required.");
+            }
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
